@@ -4,13 +4,15 @@
   "description": "Example library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "lodash": "^4.17.20",
-    "webpack": "^4.44.2"
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
