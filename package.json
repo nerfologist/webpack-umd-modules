@@ -1,0 +1,16 @@
+{
+  "name": "webpack-numbers",
+  "version": "0.0.1",
+  "description": "Example library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.20",
+    "webpack": "^4.44.2"
+  }
+}
