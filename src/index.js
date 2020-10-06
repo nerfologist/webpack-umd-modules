@@ -1,14 +1,33 @@
-import _ from 'lodash';
-import numRef from './ref.json';
+import { get } from 'lodash';
 
-export function numToWord(num) {
-  return _.reduce(numRef, (accum, ref) => {
-    return ref.num === num ? ref.word : accum;
-  }, '');
+export const SOME_UNRELATED_CONSTANT = ['a', 'b', 'c'];
+
+class SomeClass {
+  static CONSTANT = {
+    a: 1,
+    b: 2
+  };
+
+  constructor() {
+    this.somevar = 'abc';
+  }
+
+  writeSomething() {
+    console.log('def');
+  }
+
+  doStuff() {
+    const initialObject = { z: 'y', y: 'z' };
+
+    const anotherObject = {
+      ...initialObject,
+      w: 'x'
+    };
+
+    const { z, w } = anotherObject;
+
+    return get(anotherObject, 'w');
+  }
 }
 
-export function wordToNum(word) {
-  return _.reduce(numRef, (accum, ref) => {
-    return ref.word === word && word.toLowerCase() ? ref.num : accum;
-  }, -1);
-}
+export default SomeClass;
